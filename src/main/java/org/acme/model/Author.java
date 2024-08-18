@@ -29,12 +29,12 @@ public class Author extends PanacheEntity {
 
     private Date birthdate;
 
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name = "author_course",
-//            joinColumns = @JoinColumn(name = "author_id"),
-//            inverseJoinColumns = @JoinColumn(name = "course_id")
-//    )
-//    private Set<Course> courses;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "author_course",
+            joinColumns = @JoinColumn(name = "author_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private Set<Course> courses;
 
 }
