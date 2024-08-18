@@ -16,7 +16,8 @@ public class MajorService {
         this.majorRecommender = majorRecommender;
     }
 
-public List<MajorDTOResponse> getRecommendedMajors() {
+
+    public List<MajorResponseDTO> getRecommendedMajors() {
         return majorRecommender.recommendMajors().stream()
                 .map(major -> new MajorDTOResponse(major.getName(), major.getDescription(), major.getCreditsRequired(), major.getDepartment()))
                 .toList();
