@@ -24,6 +24,14 @@ public class Course extends PanacheEntity {
     @NonNull
     private int credit;
 
+    public static void saveCourse(Course course) {
+        course.persist();
+    }
+    public static Course findById(Long id) {
+        return find("id", id).firstResult();
+    }
+
+
 //    @ManyToMany(mappedBy = "course", cascade = CascadeType.ALL)
 //    private Set<Author> authors;
 }
