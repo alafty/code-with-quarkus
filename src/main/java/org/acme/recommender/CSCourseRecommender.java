@@ -12,8 +12,8 @@ public class CSCourseRecommender implements CourseRecommender {
     @Override
     public List<Course> recommendCourses() {
         return List.of(
-                new Course("CSEN101","Intro to CS",4),
-                new Course("CSEN201","Object-oriented programming",6)
+                new Course("CSEN101","Intro to CS",4,null),
+                new Course("CSEN201","Object-oriented programming",6,null)
         );
     }
 }

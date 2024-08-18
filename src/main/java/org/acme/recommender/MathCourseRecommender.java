@@ -12,8 +12,8 @@ public class MathCourseRecommender implements CourseRecommender{
     @Override
     public List<Course> recommendCourses() {
         return List.of(
-                new Course("Math101","Intro to Math",6),
-                new Course("Math201","Calculus I",8)
+                new Course("Math101","Intro to Math",6,null),
+                new Course("Math201","Calculus I",8,null)
         );
     }
 }
