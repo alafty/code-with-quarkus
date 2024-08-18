@@ -24,6 +24,6 @@ public class Course extends PanacheEntity {
     @NonNull
     private int credit;
 
-    @ManyToMany(mappedBy = "course", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "courses", cascade = CascadeType.ALL)
     private Set<Author> authors;
 }
