@@ -1,11 +1,13 @@
 package org.acme.recommender;
 
+import jakarta.enterprise.inject.Alternative;
+import jakarta.inject.Singleton;
 import org.acme.model.Major;
-
 import java.util.List;
-
 import static org.acme.enumerator.Department.INFORMATION_TECHNOLOGY;
 
+@Singleton
+@Alternative
 public class InformationTechnologyRecommender implements MajorRecommender {
     @Override
     public List<Major> recommendMajors() {
