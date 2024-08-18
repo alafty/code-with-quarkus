@@ -7,7 +7,6 @@ import java.util.List;
 import static org.acme.enumerator.Department.MEDIA_ENGINEERING;
 
 @Singleton
-@Default
 public class MediaEngineeringRecommender implements MajorRecommender {
     @Override
     public List<Major> recommendMajors() {
