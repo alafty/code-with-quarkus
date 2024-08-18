@@ -1,12 +1,9 @@
 package org.acme.service;
 import jakarta.inject.Inject;
-import org.acme.dto.CourseDTORequest;
 import org.acme.dto.CourseDTOResponse;
-import org.acme.dto.MajorResponseDTO;
 import org.acme.mapper.CourseMapper;
 import org.acme.model.Course;
 import org.acme.recommender.CourseRecommender;
-import org.acme.recommender.MajorRecommender;
 
 import java.util.List;
 

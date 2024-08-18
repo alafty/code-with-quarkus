@@ -4,8 +4,6 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Set;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -27,11 +25,8 @@ public class Course extends PanacheEntity {
     public static void saveCourse(Course course) {
         course.persist();
     }
+
     public static Course findById(Long id) {
         return find("id", id).firstResult();
     }
-
-
-//    @ManyToMany(mappedBy = "course", cascade = CascadeType.ALL)
-//    private Set<Author> authors;
 }

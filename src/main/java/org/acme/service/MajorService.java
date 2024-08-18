@@ -1,6 +1,6 @@
 package org.acme.service;
 
-import org.acme.dto.MajorResponseDTO;
+import org.acme.dto.MajorDTOResponse;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import org.acme.recommender.MajorRecommender;
@@ -16,9 +16,9 @@ public class MajorService {
         this.majorRecommender = majorRecommender;
     }
 
-public List<MajorResponseDTO> getRecommendedMajors() {
+public List<MajorDTOResponse> getRecommendedMajors() {
         return majorRecommender.recommendMajors().stream()
-                .map(major -> new MajorResponseDTO(major.getName(), major.getDescription(), major.getCreditsRequired(), major.getDepartment()))
+                .map(major -> new MajorDTOResponse(major.getName(), major.getDescription(), major.getCreditsRequired(), major.getDepartment()))
                 .toList();
     }
 }

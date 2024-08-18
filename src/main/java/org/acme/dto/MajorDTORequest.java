@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class MajorRequestDTO {
+public class MajorDTORequest {
     private String name;
     private String description;
     private Department department;
