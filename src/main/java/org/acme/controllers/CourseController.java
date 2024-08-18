@@ -1,5 +1,8 @@
 package org.acme.controllers;
 
+import org.acme.dto.CourseDTORequest;
+import org.acme.dto.CourseDTOResponse;
+
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -9,15 +12,21 @@ public class CourseController {
 
 
     @GET
-    public String getCourse()
+    public CourseDTOResponse getCourse()
     {
-        return "Da course gamd mooot";
+        return CourseDTOResponse.builder()
+                .credit(2)
+                .description("Course gamd moot")
+                .build();
     }
 
     @POST
-    public String addCourse()
+    public CourseDTOResponse addCourse(CourseDTORequest courseDTORequest)
     {
-        return "el course added";
+        return CourseDTOResponse.builder()
+                .credit(2)
+                .description("Course gamd moot")
+                .build();
     }
     
 }
