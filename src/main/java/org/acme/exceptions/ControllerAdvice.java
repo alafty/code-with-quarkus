@@ -5,7 +5,7 @@ import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
 @Provider
-public class ControlelrAdvice implements ExceptionMapper<Exception>{
+public class ControllerAdvice implements ExceptionMapper<Exception>{
     
     @Override
     public Response toResponse(Exception e)
