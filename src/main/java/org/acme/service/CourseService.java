@@ -1,5 +1,4 @@
 package org.acme.service;
-
 import jakarta.inject.Inject;
 import org.acme.dto.CourseDTORequest;
 import org.acme.dto.CourseDTOResponse;
